@@ -22,3 +22,11 @@ font-size: 13px;
 margin: 5px 0;
 vertical-align: baseline;
 }
+
+.no-d-text{
+    text-decoration: none !important;
+    margin: 4px;
+}
+.no-d-text:hover{
+    text-decoration: none !important;
+}

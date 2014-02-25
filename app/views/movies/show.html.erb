@@ -2,6 +2,7 @@
   <div class="row-fluid">
     <div class="span2">
       <h3>Poster</h3>
+      <p>Rating:&nbsp;<span style="color: #fff"><%= @movie.vote_average %></span><div id="rating" class="rating" style="margin: 3px" data-score="<%= @movie.vote_average %>"></div></p>
       <%= image_tag("#{@configuration.base_url}w154#{@movie.poster_path}") if @movie.poster_path %>
       <h3>Facts</h3>
       Budget: $<%= number_with_delimiter(@movie.budget, :delimiter => ',') %><br />
@@ -60,8 +61,6 @@
 					<% end %>
 				<% end %>
 			<% end %>
-			
     </div>
   </div>
 </div>
-

@@ -1,0 +1,24 @@
+Compiled application.js  (0ms)  (pid 6014)
+Compiled application.css  (0ms)  (pid 6014)
+Compiled application.js  (0ms)  (pid 6014)
+Compiled application.css  (0ms)  (pid 6014)
+
+
+Started GET "/movies/230222" for 127.0.0.1 at 2014-02-25 12:50:49 +0200
+Connecting to database specified by database.yml
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"230222"}
+  Rendered movies/show.html.erb within layouts/application (8227.3ms)
+Completed 500 Internal Server Error in 9750ms
+
+ActionView::Template::Error (jquery.js isn't precompiled):
+    2: <html lang="en">
+    3: <head>
+    4:   <title>TheMovieDB</title>
+    5:   <%= javascript_include_tag "jquery.js" %>
+    6:   <%= javascript_include_tag "jquery.raty.min.js" %>
+    7:   <%= javascript_include_tag "application" %>
+    8:   <!-- stylesheet_link_tag    "application", :media => "all" -->
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1496990256124881837_70169464905140'
+
+

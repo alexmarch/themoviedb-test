@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <title>TheMovieDB</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!--<%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" %>-->
+  <!--<%= javascript_include_tag "jquery.raty.min.js" %>-->
   <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "styles" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="assets/bootstrap-responsive.css" rel="stylesheet">
+  <!--<link href="assets/bootstrap-responsive.css" rel="stylesheet">-->
 </head>
 <body>
-	
-	<div class="container">
-		<%= yield %>
-  </div>
+
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

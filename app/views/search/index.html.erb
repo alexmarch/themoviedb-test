@@ -2,7 +2,8 @@
 	<% @movie.each do |movie| %>
 		<tr>
 			<td style="width:15%">
-				<%= link_to movie_path(movie.id) do %>
+				<%= link_to movie_path(movie.id), :class => 'no-d-text' do %>
+                    <p>Rating:&nbsp;<span style="color: #fff"><%= movie.vote_average %></span><div id="rating" class="rating" style="margin: 3px" data-score="<%= movie.vote_average %>"></div></p>
 					<%= image_tag("#{@configuration.base_url}w154#{movie.poster_path}") if movie.poster_path %>
 				<% end %>
 			</td>

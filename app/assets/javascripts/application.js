@@ -15,25 +15,40 @@
 //= require_tree .
 
 jQuery.fn.center = function () {
-    this.css("position","absolute");
+    this.css("position", "absolute");
     this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
     this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
     return this;
 }
 
-$(document).ready(function() {
-  $(".center_me").center(true);
+$(document).ready(function () {
+    $(".center_me").center(true);
+
 });
 
 
-$(document).ready(function() {
-	$('#star').raty({
-		number: 10,
-    readOnly: true,
-    half: true,
-    round: { down: .26, full: .6, up: .76 },
-  	score: function() {
-  	  return $(this).attr('data-score');
-  	}
-	});
+$(document).ready(function () {
+    $('#star').raty({
+        number: 10,
+        readOnly: true,
+        half: true,
+        round: { down: .26, full: .6, up: .76 },
+        score: function () {
+            return $(this).attr('data-score');
+        }
+    });
+
+    $('.rating').each(function () {
+        $(this).raty({
+            numberMax: 7,
+            number: 10,
+            readOnly: true,
+            half: true,
+            round: { down: .26, full: .6, up: .76 },
+            score: function () {
+                return $(this).attr('data-score');
+            }
+        });
+    });
+
 });
